@@ -19,6 +19,8 @@ Aplikasi web berbasis wizard (multi-step) untuk mencatat pembuatan Resi Pengirim
 - **Zero-Trust Backend** — Harga tidak dipercaya dari frontend; backend query ulang dari DB
 - **ACID Transaction** — Insert invoice header + detail atomik dengan `db.Transaction()`
 - **Auto Seeding** — Data master item dan user langsung tersedia saat pertama run
+- **Print Invoice** — Generate dan cetak invoice layout A4 (bonus)
+- **Webhook Notification** — Kirim data invoice ke webhook URL setelah commit (bonus)
 
 ## Cara Menjalankan
 
@@ -88,7 +90,14 @@ invoice-app/
 │   ├── services/       # Business logic
 │   └── Dockerfile
 ├── frontend/
-│   └── ...             # Next.js 14 app
+│   ├── src/
+│   │   ├── components/  # Step1, Step2, Step3
+│   │   ├── lib/         # Axios instance
+│   │   ├── pages/       # Next.js pages
+│   │   ├── stores/      # Zustand stores
+│   │   ├── styles/      # Tailwind globals
+│   │   └── types/       # TypeScript interfaces
+│   └── Dockerfile
 ├── docker-compose.yml
 ├── .env.example
 └── README.md
