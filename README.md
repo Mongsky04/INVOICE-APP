@@ -1,4 +1,4 @@
-# Invoice App — Fleetify Technical Test
+# Invoice App — Technical Test
 
 Aplikasi web berbasis wizard (multi-step) untuk mencatat pembuatan Resi Pengiriman dan men-generate Invoice untuk kebutuhan fleet & logistics.
 
